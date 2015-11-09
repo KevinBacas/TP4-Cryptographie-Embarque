@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-from utils import multiplication_entiere, produit, affiche_table_multiplicative, exp, inverse, subgroup
+from utils import multiplication_entiere, produit, affiche_table_multiplicative, exp, inverse, subgroup, generateurs
 
 if __name__ == '__main__':
 	print "Hello world!"
@@ -24,3 +24,6 @@ if __name__ == '__main__':
 	print inverse(3, poly & 0b1111, 0b100)
 
 	print subgroup(3, poly & 0b1111, 0b10)
+	
+	print generateurs(3, poly & 0b1111)
+	print generateurs(8, poly)

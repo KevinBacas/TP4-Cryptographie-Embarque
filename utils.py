@@ -47,3 +47,11 @@ def subgroup(n, poly, x):
 		new_elem = produit(n, poly, new_elem, x)
 		res.append(new_elem)
 	return res
+
+def generateurs(n, poly):
+	res = []
+	for i in xrange(2, 1<<n):
+		liste = subgroup(n, poly, i)
+		if len(liste) == ((1<<n)-1):
+			res.append(i)
+	return res
