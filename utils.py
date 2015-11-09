@@ -35,3 +35,7 @@ def exp(n, poly, x, k):
 		if ki == "1":
 			res = produit(n, poly, res, x)
 	return res
+
+def inverse(n, poly, x):
+	k = (0b1 << n) - 2
+	return exp(n, poly, x, k)
