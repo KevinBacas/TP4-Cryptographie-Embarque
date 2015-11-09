@@ -39,3 +39,11 @@ def exp(n, poly, x, k):
 def inverse(n, poly, x):
 	k = (0b1 << n) - 2
 	return exp(n, poly, x, k)
+
+def subgroup(n, poly, x):
+	res = [x]
+	new_elem = x
+	while new_elem != 1:
+		new_elem = produit(n, poly, new_elem, x)
+		res.append(new_elem)
+	return res
