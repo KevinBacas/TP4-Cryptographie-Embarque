@@ -28,4 +28,10 @@ def affiche_table_multiplicative(n, poly) :
 		print
 
 def exp(n, poly, x, k):
-	pass
+	res = x
+	b = bin(k)[3:]
+	for ki in b:
+		res = produit(n, poly, res, res)
+		if ki == "1":
+			res = produit(n, poly, res, x)
+	return res
